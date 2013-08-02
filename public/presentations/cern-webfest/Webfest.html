@@ -25,7 +25,7 @@
 		<p>Michael Kohler, Mozilla Rep, mkohler@picobudget.com</p>
 	</header>
 	
-	<div class="slide" id="title"><div>
+	<section class="slide" id="title" data-timing="3"><div>
 		<section>
 			<header>
 			<h1>Welcome</h1>
@@ -33,10 +33,10 @@
 			<p>Foo</p>
 			</span>
 		</section>
-	</div></div>
+	</div></section>
 	
     <!-- LEAVE THIS!!! (comment added by Michael Kohler) -->
-	<div class="slide" id="ThankYou"><div>
+	<section class="slide" id="ThankYou"><div>
 		<section>
 			<header>
 				<h2>Shower Presentation Template</h2>
@@ -50,33 +50,14 @@
 			</ul>
 			<p>Shower: <a href="http://github.com/pepelsbey/shower">github.com/pepelsbey/shower</a></p>
 		</section>
-	</div></div>
+	</div></section>
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
 		-->
 	<div class="progress"><div></div></div>
-	<script src="scripts/script.js"></script>
+	<script src="scripts/shower.js"></script>
 	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
-
-<!-- SOCKETS -->
-<script src="../libs/socket.io.js"></script>
-<script>
-(function(window, document) {
-  var socket = io.connect('/');
-
-  // handle the message from the controller
-  socket.on('message', function(e) {
-    if(e.state) {
-      if (e.state == 1)
-        scrollToSlide(getCurrentSlideNumber() + 1);
-      else if (e.state == -1)
-        scrollToSlide(getCurrentSlideNumber() - 1);
-    }
-  });
-
-})(this, this.document);
-</script>
 
 </body>
 </html>
